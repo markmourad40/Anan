@@ -47,7 +47,7 @@ function toggleSidebar(state) {
 		} else {
 			document.getElementById('sidebar').style.left = '-280px';
 		}
-		setTimeout(closeSidebar, 200)
+		setTimeout(closeSidebar, 250)
 		function closeSidebar() {
 			document.getElementById('sidebarContainer').classList.remove('d-block')
 		}
