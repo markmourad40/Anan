@@ -271,13 +271,10 @@
 }
 
 .responsive {
-	float: right;
-	display: block;
 	cursor: pointer;
-	margin-top: -28px;
 }
 .responsive i {
-    color: #d29751;
+    color: #A98236;
 	font-size: 25px;
 }
 #mobile-menu {
@@ -730,26 +727,21 @@ border-bottom: none;
 	padding: 20px 0;
 }
 .responsive {
-	float: right;
-	display: block;
 	cursor: pointer;
-	margin-top: -28px;
 }
 .responsive i {
-	color: #d29751;
+	color: #A98236;
 	font-size: 25px;
 }
 #mobile-menu {
-display: none;
-background: no-repeat;
-padding: 20px 0;
-margin-top: 21px;
+	display: none;
+	background: no-repeat;
+	padding: 20px 0;
+	margin-top: 21px;
 }
 .sticky-menu #mobile-menu {
     display: none;
     background: no-repeat;
-    padding: ;
-    margin-top: ;
     overflow: scroll;
     height: 236px;
     margin-top: 20px;
@@ -1087,4 +1079,66 @@ margin-top: 21px;
 	padding: 50px 40px;
 }
 
+}
+
+
+/* New Responsive */
+@media (max-width: 991px) {
+	.sidebar-container {
+		position: fixed;
+		inset: 0;
+		background-color: #0009;
+		opacity: 1;
+		z-index: 99999;
+	}
+	.sidebar-container .sidebar {
+		position: fixed;
+		top: 0;
+		height: 100dvh;
+		background-color: #1C3769;
+		width: 270px;
+		z-index: 99999;
+		box-shadow: 0 2px 6px #1C3769, 0 0 transparent, 0 0 transparent;
+	}
+	@keyframes openSidebar {
+		0%   {left: -280px; right: -280px;}
+		100% {left: 0px; right: 0px;}
+	}
+	@keyframes closeSidebar {
+		0%   {left: 0px; right: 0px;}
+		100% {left: -280px; right: -280px;}
+	}
+	.sidebar-container .sidebar .close-icon {
+		font-size: 24px;
+		color: #A98236;
+	}
+	.sidebar-container .sidebar .side-items p, 
+	.sidebar-container .sidebar .side-items p a {
+		color: #fff;
+	}
+	.sidebar-container .sidebar .side-items p a.active {
+		color: #A98236;
+		font-weight: 700;
+	}
+	.sidebar .side-items p a:hover {
+		color: #A98236;
+	}
+	.sidebar .language {
+		border-top: 1px solid #fff;
+		padding-top: 20px;
+	}
+	.sidebar .language p {
+		color: #fff;
+		padding: 4px 16px !important;
+		margin: 0 !important;
+		cursor: pointer;
+		font-weight: 500;
+		background-color: #A98236;
+		border-radius: 6px;
+		width: fit-content;
+	}
+	.sidebar .language p:hover {
+		background-color: #fff;
+		color: #A98236;
+	}
 }

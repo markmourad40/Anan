@@ -1,9 +1,65 @@
+// Set Direction
+if (localStorage.getItem('lang') === null) {
+	localStorage.setItem('lang', 'ar');
+	document.getElementsByClassName('switchLang')[0].innerHTML = 'English';
+	document.getElementsByClassName('switchLang')[1].innerHTML = 'English';
+	document.body.dir = 'rtl';
+	document.body.lang = 'ar'
+} else {
+	document.body.dir = localStorage.getItem('lang') === 'ar' ? 'rtl' : 'ltr';
+	document.body.lang = localStorage.getItem('lang') === 'ar' ? 'ar' : 'en';
+}
+
+// Check screen width
+addEventListener("resize", (event) => {
+	if (event.target.innerWidth > 991) {
+		document.getElementById('sidebarContainer').classList.remove('d-block')
+	}
+});
+
+
+// Change Language
+function changeLang() {
+	if (localStorage.getItem('lang') === 'en') {
+	  localStorage.setItem('lang', 'ar');
+	} else {
+	  localStorage.setItem('lang', 'en');
+	}
+	location.reload(); 
+}
+
+// Toggle Sidebar
+function toggleSidebar(state) {
+	if (state === 'open') {
+		document.getElementById('sidebarContainer').classList.add('d-block');
+		if (localStorage.getItem('lang') === 'ar') {
+			document.getElementById('sidebar').style.right = '0px';
+			document.getElementById('sidebar').style.textAlign = 'right';
+		} else {
+			document.getElementById('sidebar').style.left = '0px';
+			document.getElementById('sidebar').style.textAlign = 'left';
+		} 
+		document.getElementById('sidebar').style.animation = 'openSidebar 0.25s linear';
+	} else {
+		document.getElementById('sidebar').style.animation = 'closeSidebar 0.25s linear';
+		if (localStorage.getItem('lang') === 'ar') {
+			document.getElementById('sidebar').style.right = '-280px';
+		} else {
+			document.getElementById('sidebar').style.left = '-280px';
+		}
+		setTimeout(closeSidebar, 200)
+		function closeSidebar() {
+			document.getElementById('sidebarContainer').classList.remove('d-block')
+		}
+	}
+}
+
 (function ($) {
 "use strict";
 
 // One Page Nav
 var top_offset = $('.header-area').height() - 100;
-$('.main-menu nav ul').onePageNav({
+$('.main-menu .navbar ul').onePageNav({
 	currentClass: 'active',
 	scrollOffset: top_offset,
 });
@@ -11,7 +67,7 @@ $('.main-menu nav ul').onePageNav({
 // sticky
 $(window).on('scroll', function () {
 	var scroll = $(window).scrollTop();
-	if (scroll < 200) {
+	if (scroll < 100) {
 		$("#header-sticky").removeClass("sticky-menu");
 	} else {
 		$("#header-sticky").addClass("sticky-menu");
