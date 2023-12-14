@@ -38,6 +38,9 @@
 
 /* Normal desktop :992px. */
 @media (min-width: 992px) and (max-width: 1200px) {
+.second-about {
+	display: none;
+}
 .container-p {
 	padding: 0 30px;
 }
@@ -719,10 +722,10 @@ border-bottom: none;
 .f-cta-area {
 	padding: 35px 20px 0;
 }
-.breadcrumb-area {
+/* .breadcrumb-area {
     padding-top: 100px;
     padding-bottom: 100px;   
-}
+} */
 .menu-area {
 	padding: 20px 0;
 }
@@ -817,9 +820,6 @@ border-bottom: none;
 .slider-shape {
 	display: none !important;
 }
-.second-about {
-	display: none;
-}
 .s-about-content.pl-30 {
 	margin-top: 0;
 }
@@ -884,7 +884,7 @@ border-bottom: none;
 	font-weight: 500;
 }
 .breadcrumb-title h2 {
-	font-size: 25px;
+	font-size: 35px;
 }
 .breadcrumb-title p {
 	padding: 0;
