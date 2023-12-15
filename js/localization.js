@@ -16,7 +16,8 @@ const en = {
     'عنان العقارية': 'Anan Real Estate',
     'رؤيتنا': 'Our vision',
     'قيمنا': 'Our principles',
-    'رسالتنا': 'Our Mission'
+    'رسالتنا': 'Our Mission',
+    'قراءة المزيد': 'Read More'
 }
 const ar = {
     'English': 'English',
@@ -30,7 +31,8 @@ const ar = {
     'عنان العقارية': 'عنان العقارية',
     'رؤيتنا': 'رؤيتنا',
     'قيمنا': 'قيمنا',
-    'رسالتنا': 'رسالتنا'
+    'رسالتنا': 'رسالتنا',
+    'قراءة المزيد': 'قراءة المزيد'
 }
 
 for (let index = 0; index < localizationArray.length; index++) {
