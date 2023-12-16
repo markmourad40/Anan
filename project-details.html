@@ -19,115 +19,112 @@
         <link rel="stylesheet" href="css/default.css">
         <link rel="stylesheet" href="css/style.css">
         <link rel="stylesheet" href="css/responsive.css">
+        <link rel="stylesheet" href="css/slider.css">
     </head>
-    <body>
+    <body dir="rtl" lang="ar">
         <!-- header -->
-        <header class="header-area">  
-			<div class="header-top second-header d-none d-md-block">
-                <div class="container">
-                    <div class="row align-items-center">
-                        <div class="col-lg-6">
-                            <div class="wellcome-text text-center text-lg-left">
-                                <p>Welcome to our Relxtower.</p>
-                            </div>
-                        </div>
-                        <div class="col-lg-6 d-none d-lg-block">
-                            <div class="header-cta text-right">
-                                <ul>
-                                    <li>
-                                        <i class="icon dripicons-phone"></i>
-                                        <span>+8 12 3456897</span>
-                                    </li>
-                                    <li>
-                                        <i class="icon dripicons-mail"></i>
-                                        <span>info@example.com</span>
-                                    </li>
-                                    <li>
-                                        <i class="icon dripicons-clock"></i>
-                                        <span>Mon-Fri: 8am - 7pm</span>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
+        <header class="header-area">
+            <div id="header-sticky">
+                <div class="navbar">
+                    <div onclick="toggleSidebar('open')" class="responsive d-lg-none d-block"><i id="menuIcon" class="icon"></i></div>
+                    <div class="logo">
+                        <a href="index.html"><img src="img/logo/logo.png" alt="logo"></a>
+                    </div>
+                    <ul class="nav-items d-lg-flex d-none">
+                        <li><a class="localize" href="index.html">الرئيسية</a></li>
+                        <li><a class="localize" href="projects.html">المشروعات</a></li>
+                        <li><a class="localize" href="executive-management.html">الادارة التنفيذية</a></li>
+                        <li><a class="localize" href="about.html">معلومات عنا</a></li>
+                        <li><a class="localize" href="contact.html">تواصل معنا</a></li>
+                    </ul>
+                    <div class="language d-lg-flex d-none">
+                        <p class="localize switchLang" onclick="changeLang()">English</p>
                     </div>
                 </div>
-            </div>		
-            <div id="header-sticky" class="menu-area">
-                <div class="container">
-                    <div class="second-menu">
-                        <div class="row align-items-center">
-                            <div class="col-xl-2 col-lg-2">
-                                <div class="logo">
-                                    <a href="index.html"><img src="img/logo/logo.png" alt="logo"></a>
-                                </div>
-                            </div>
-                            <div class="col-xl-10 col-lg-9">
-                                <div class="responsive"><i class="icon dripicons-align-right"></i></div>
-                                <div class="main-menu text-right <text-xl-right></text-xl-right>">
-                                    <nav id="mobile-menu">
-                                        <ul>
-                                            <li class="has-sub">
-												<a href="index.html">Home</a>
-												<ul>													
-													<li><a href="index.html">Home Page 01</a></li>
-													<li><a href="index-2.html">Home Page 02</a></li>													
-												</ul>
-											</li>
-                                            <li><a href="about.html">About Us</a></li>
-                                            <li><a href="services.html">Services</a></li>
-                                            <li><a href="apartments.html">Apartments </a></li>                                            
-											<li class="has-sub"><a href="#">Other Page</a>
-												<ul>													
-													<li><a href="pricing.html">Pricing</a></li>
-													<li><a href="team.html">Team</a></li>
-													<li><a href="gallery.html">Gallery</a></li>
-												</ul>
-											</li>
-											<li><a href="blog.html">Blog</a></li>
-                                            <li><a href="contact.html">Contact</a></li>     
-											<li><a href="contact.html" class="top-btn">SINGUP</a></li>											
-                                        </ul>
-                                    </nav>
-                                </div>
-                            </div>                           
+            </div>
+            <div id="sidebarContainer" class="sidebar-container d-none">
+                <div id="sidebar" class="sidebar">
+                    <div class="d-flex align-items-center justify-content-between py-3 mb-2">
+                        <div class="logo">
+                            <a href="index.html"><img src="img/logo/logo.png" alt="logo"></a>
                         </div>
+                        <div class="px-3" onclick="toggleSidebar('close')">
+                            <span class="close-icon">&#10005;</span>
+                        </div>
+                    </div>
+                    <div class="side-items px-4 mb-4">
+                        <p><a class="localize" href="index.html">الرئيسية</a></p>
+                        <p><a class="localize" href="projects.html">المشروعات</a></p>
+                        <p><a class="localize" href="executive-management.html">الادارة التنفيذية</a></p>
+                        <p><a class="localize" href="about.html">معلومات عنا</a></p>
+                        <p><a class="localize" href="contact.html">تواصل معنا</a></p>
+                    </div>
+                    <div class="language mx-4">
+                        <p class="localize mb-0 p-0 switchLang" onclick="changeLang()">English</p>
                     </div>
                 </div>
             </div>
         </header>
         <!-- header-end -->
+
         <!-- main-area -->
         <main>
             <!-- breadcrumb-area -->
-            <section class="breadcrumb-area d-flex align-items-center" style="background-image:url(img/testimonial/test-bg.jpg)">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-xl-6 offset-xl-3 col-lg-8 offset-lg-2">
-                            <div class="breadcrumb-wrap text-center">
-                                <div class="breadcrumb-title mb-30">
-                                    <h2>Apartments Details</h2>                                    
-                                </div>
-                                <nav aria-label="breadcrumb">
-                                    <ol class="breadcrumb">
-                                        <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                                        <li class="breadcrumb-item active" aria-current="page">Apartments Details</li>
-                                    </ol>
-                                </nav>
+            <!-- <section class="breadcrumb-area d-flex align-items-center justify-content-center p-relative" style="background-image:url(https://cdn.fairfieldresidential.com/xJuICbcjxjtfgyG0ihmTYCRxU2uyTAwIi73TolPk.jpg)">
+                <div class="image-overlay"></div>
+                    <div class="p-absolute" style="inset: 0; z-index: 1; display: flex; align-items: center; justify-content: center;">
+                        <div class="breadcrumb-wrap text-center">
+                            <div class="breadcrumb-title mb-30">
+                                <h2 class="localize">تفاصيل المشروع</h2>                                    
                             </div>
+                            <nav aria-label="breadcrumb">
+                                <ol class="breadcrumb">
+                                    <li class="breadcrumb-item"><a class="localize" href="projects.html">المشروعات</a></li>
+                                    <li class="breadcrumb-item active localize" aria-current="page">تفاصيل المشروع</li>
+                                </ol>
+                            </nav>
                         </div>
                     </div>
                 </div>
-            </section>
+            </section> -->
             <!-- breadcrumb-area-end -->
+
+            <!-- slider-area -->
+            <div id="carouselExampleControls" class="carousel">
+                <div class="carousel-inner">
+                    <!-- Image -->
+                    <div class="carousel-item active">
+                        <img class="carousel-img" alt="Image" src="https://media.radissonhotels.net/image/corporate--business-development/suite/16256-140839-f71067308_3xl.jpg?impolicy=CustomCrop&cwidth=670&cheight=384">
+                    </div>
+                    <!-- Image -->
+                    <div class="carousel-item">
+                        <img class="carousel-img" alt="Image" src="https://media.istockphoto.com/id/1384642884/photo/the-evening-sun-is-reflected-in-the-modern-glass-facade-with-balconies.webp?b=1&s=170667a&w=0&k=20&c=9cnDfc9tNIAcgvuGHZkST7CP-dFaNXutX8OpzVO1jEA=">
+                    </div>
+                    <!-- Image -->
+                    <div class="carousel-item">
+                        <img class="carousel-img" alt="Image" src="https://pd-stuytown-cd.stuytown.com/-/media/sites/reserved/_0-to-14/1421-280fa-11g-stuytown1276firstav750x750pxlr2/stpcv-platinum-dining-living-1000x666px.jpg">
+                    </div>
+                </div>
+                <a id="carouselPrev" class="carousel-control-prev" href="#carouselExampleControls" role="button">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a id="carouselNext" class="carousel-control-next" href="#carouselExampleControls" role="button">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+            <!-- slider-area-end -->
+
 			<!-- choose-area -->
             <section class="choose-area pt-120 pb-120 p-relative">             
                 <div class="chosse-img wow fadeInRight animated" data-animation="fadeInRight animated" data-delay=".2s"></div>
-                <div class="container">
+                <div class="container text-right">
                     <div class="row">
 						<div class="col-xl-6">
-						  <div class="s-about-img p-relative">
-								<img src="img/features/about_img03.png" alt="img">
-								</div>
+						    <div class="s-about-img p-relative">
+								<img src="http://htmldemo.zcubethemes.com/relxtower/img/features/about_img03.png" alt="img">
+							</div>
 						 </div>
                         <div class="col-xl-6">
                             <div class="choose-wrap">
@@ -137,7 +134,6 @@
                                 </div>
                                 <div class="choose-content wow fadeInUp animated" data-animation="fadeInDown animated" data-delay=".2s">
                                     <p>Pellentesque habitant morbi tristique senectus et netus et fames acturpis egestas. Vestibulum tortor quam, feugiat vitae, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. mivitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien.</p>
-									
                                     <div class="choose-list mt-20 mb-20">
                                         <ul>
                                             <li>
@@ -161,21 +157,20 @@
 									<h3>Price:</h3>
 									<h2>$1,786.80</h2>
                                     <div class="choose-btn mt-30">
-                                        <a href="#" class="btn">Contact Us</a>
+                                        <a href="contact.html" class="btn">Contact Us</a>
                                     </div>
                                 </div>
                             </div>
                         </div>
-						 
                     </div>
-					
                 </div>
             </section>
             <!-- choose-area-end -->
 				
 			<!-- cta-area -->
-            <section class="cta-area cta-bg pt-120 pb-120" style="background-image:url(img/bg/cta_bg02.jpg)">
+            <section class="cta-area cta-bg pt-120 pb-120" style="background-image:url(https://www.hotel-development.marriott.com/resourcefiles/apartments/amb-hero.jpg)">
                 <div class="container">
+                    <div class="image-overlay"></div>
                     <div class="row justify-content-center text-center">
                         <div class="col-lg-12">
                             <div class="section-title cta-title wow fadeInLeft animated" data-animation="fadeInDown animated" data-delay=".2s">
@@ -183,28 +178,26 @@
                                 <h2>MAKE AN APPOINTMENT NOW</h2>
 								<h3>666 888 0000</h3>
 								 <div class="cta-btn s-cta-btn wow fadeInRight animated mt-30" data-animation="fadeInDown animated" data-delay=".2s">
-									<a href="#" class="btn">Contact Us</a>
+									<a href="contact.html" class="btn">Contact Us</a>
 								</div>
                             </div>
-                                             
                         </div>
-					
                     </div>
                 </div>
             </section>
             <!-- cta-area-end -->	
         </main>
         <!-- main-area-end -->
+
         <!-- footer -->
         <footer class="footer-bg footer-p pt-100 pb-80 ">
-  
-            <div class="footer-top pb-30">
+            <div class="footer-top pb-30 text-right">
                 <div class="container">
                     <div class="row justify-content-between">
                         <div class="col-xl-6 col-lg-6 col-sm-6">
                             <div class="footer-widget mb-30">
                                 <div class="logo mb-35">
-                                    <a href="#"><img src="img/logo/logo.png" alt="logo"></a>
+                                    <a href="index.html"><img src="img/logo/logo.png" alt="logo"></a>
                                 </div>
                                 <div class="footer-text mb-20">
                                     <p>Pellentesque habitant morbi tristique senectus et netus et fames acturpis egestas. Vestibulum tortor quam, feugiat vitae, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. mivitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien.</p>
@@ -244,17 +237,16 @@
                                     <ul>
                                         <li><a href="index.html">Home</a></li>
                                         <li><a href="projects.html">Projects</a></li>
-                                        <li><a href="services.html">Executive Management</a></li>
+                                        <li><a href="executive-management.html">Executive Management</a></li>
                                         <li><a href="about.html">About Us</a></li>
                                         <li><a href="contact.html">Contact Us</a></li>
                                         <li><a href="policy.html">Privacy Policy</a></li>
                                         <li><a href="terms-and-conditions.html">Terms & Conditions</a></li>
-                                        <li><a href="common-questions.html">Common Questions</a></li>
+                                        <li><a href="frequently-asked-questions.html">FAQ</a></li>
                                     </ul>
                                 </div>
                             </div>
                         </div>                     
-                        
                     </div>
                 </div>
             </div>
@@ -293,5 +285,7 @@
         <script src="js/jquery.magnific-popup.min.js"></script>
         <script src="js/element-in-view.js"></script>
         <script src="js/main.js"></script>
+        <script src="js/localization.js"></script>
+        <script src="js/slider.js"></script>
     </body>
 </html>

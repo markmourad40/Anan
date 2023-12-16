@@ -20,105 +20,73 @@
         <link rel="stylesheet" href="css/style.css">
         <link rel="stylesheet" href="css/responsive.css">
     </head>
-    <body>
+    <body dir="rtl" lang="ar">
         <!-- header -->
-        <header class="header-area">  
-			<div class="header-top second-header d-none d-md-block">
-                <div class="container">
-                    <div class="row align-items-center">
-                        <div class="col-lg-6">
-                            <div class="wellcome-text text-center text-lg-left">
-                                <p>Welcome to our Relxtower.</p>
-                            </div>
-                        </div>
-                        <div class="col-lg-6 d-none d-lg-block">
-                            <div class="header-cta text-right">
-                                <ul>
-                                    <li>
-                                        <i class="icon dripicons-phone"></i>
-                                        <span>+8 12 3456897</span>
-                                    </li>
-                                    <li>
-                                        <i class="icon dripicons-mail"></i>
-                                        <span>info@example.com</span>
-                                    </li>
-                                    <li>
-                                        <i class="icon dripicons-clock"></i>
-                                        <span>Mon-Fri: 8am - 7pm</span>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
+        <header class="header-area">
+            <div id="header-sticky">
+                <div class="navbar">
+                    <div onclick="toggleSidebar('open')" class="responsive d-lg-none d-block"><i id="menuIcon" class="icon"></i></div>
+                    <div class="logo">
+                        <a href="index.html"><img src="img/logo/logo.png" alt="logo"></a>
+                    </div>
+                    <ul class="nav-items d-lg-flex d-none">
+                        <li><a class="localize" href="index.html">الرئيسية</a></li>
+                        <li><a class="localize" href="projects.html">المشروعات</a></li>
+                        <li><a class="localize active" href="executive-management.html">الادارة التنفيذية</a></li>
+                        <li><a class="localize" href="about.html">معلومات عنا</a></li>
+                        <li><a class="localize" href="contact.html">تواصل معنا</a></li>
+                    </ul>
+                    <div class="language d-lg-flex d-none">
+                        <p class="localize switchLang" onclick="changeLang()">English</p>
                     </div>
                 </div>
-            </div>		
-            <div id="header-sticky" class="menu-area">
-                <div class="container">
-                    <div class="second-menu">
-                        <div class="row align-items-center">
-                            <div class="col-xl-2 col-lg-2">
-                                <div class="logo">
-                                    <a href="index.html"><img src="img/logo/logo.png" alt="logo"></a>
-                                </div>
-                            </div>
-                            <div class="col-xl-10 col-lg-9">
-                                <div class="responsive"><i class="icon dripicons-align-right"></i></div>
-                                <div class="main-menu text-right <text-xl-right></text-xl-right>">
-                                    <nav id="mobile-menu">
-                                        <ul>
-                                            <li class="has-sub">
-												<a href="index.html">Home</a>
-												<ul>													
-													<li><a href="index.html">Home Page 01</a></li>
-													<li><a href="index-2.html">Home Page 02</a></li>													
-												</ul>
-											</li>
-                                            <li><a href="about.html">About Us</a></li>
-                                            <li><a href="services.html">Services</a></li>
-                                            <li><a href="apartments.html">Apartments </a></li>                                            
-											<li class="has-sub"><a href="#">Other Page</a>
-												<ul>													
-													<li><a href="pricing.html">Pricing</a></li>
-													<li><a href="team.html">Team</a></li>
-													<li><a href="gallery.html">Gallery</a></li>
-												</ul>
-											</li>
-											<li><a href="blog.html">Blog</a></li>
-                                            <li><a href="contact.html">Contact</a></li>  
-											 <li><a href="contact.html" class="top-btn">SINGUP</a></li>                         
-                                        </ul>
-                                    </nav>
-                                </div>
-                            </div>                           
+            </div>
+            <div id="sidebarContainer" class="sidebar-container d-none">
+                <div id="sidebar" class="sidebar">
+                    <div class="d-flex align-items-center justify-content-between py-3 mb-2">
+                        <div class="logo">
+                            <a href="index.html"><img src="img/logo/logo.png" alt="logo"></a>
                         </div>
+                        <div class="px-3" onclick="toggleSidebar('close')">
+                            <span class="close-icon">&#10005;</span>
+                        </div>
+                    </div>
+                    <div class="side-items px-4 mb-4">
+                        <p><a class="localize" href="index.html">الرئيسية</a></p>
+                        <p><a class="localize" href="projects.html">المشروعات</a></p>
+                        <p><a class="localize active" href="executive-management.html">الادارة التنفيذية</a></p>
+                        <p><a class="localize" href="about.html">معلومات عنا</a></p>
+                        <p><a class="localize" href="contact.html">تواصل معنا</a></p>
+                    </div>
+                    <div class="language mx-4">
+                        <p class="localize mb-0 p-0 switchLang" onclick="changeLang()">English</p>
                     </div>
                 </div>
             </div>
         </header>
         <!-- header-end -->
+
         <!-- main-area -->
         <main>
             <!-- breadcrumb-area -->
-            <section class="breadcrumb-area d-flex align-items-center" style="background-image:url(img/testimonial/test-bg.jpg)">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-xl-6 offset-xl-3 col-lg-8 offset-lg-2">
-                            <div class="breadcrumb-wrap text-center">
-                                <div class="breadcrumb-title mb-30">
-                                    <h2>My Team</h2>                                    
-                                </div>
-                                <nav aria-label="breadcrumb">
-                                    <ol class="breadcrumb">
-                                        <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                                        <li class="breadcrumb-item active" aria-current="page">Pricing</li>
-                                    </ol>
-                                </nav>
-                            </div>
+            <section class="breadcrumb-area d-flex justify-content-center p-relative" style="background-image:url(https://anan.com.sa/files/83891631466681613e34b957979.jpg)">
+                <div class="image-overlay"></div>
+                <div class="p-absolute" style="inset: 0; z-index: 1; display: flex; align-items: center; justify-content: center;">
+                    <div class="breadcrumb-wrap text-center">
+                        <div class="breadcrumb-title mb-30">
+                            <h2 class="localize">الادارة التنفيذية</h2>                                    
                         </div>
+                        <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item"><a class="localize" href="index.html">الرئيسية</a></li>
+                                <li class="breadcrumb-item active localize" aria-current="page">الادارة التنفيذية</li>
+                            </ol>
+                        </nav>
                     </div>
                 </div>
             </section>
             <!-- breadcrumb-area-end -->
+
 			<!-- team-area -->
             <section id="team" class="team-area pt-120 pb-90">             
                 <div class="container">                 
@@ -126,7 +94,7 @@
                         <div class="col-lg-4 col-md-6">
                             <div class="single-team text-center mb-30 wow fadeInUp animated" data-animation="fadeInDown animated" data-delay=".2s">
                                 <div class="team-thumb">
-                                    <img src="img/team/team-img01.jpg" alt="img">
+                                    <img src="http://htmldemo.zcubethemes.com/relxtower/img/team/team-img01.jpg" alt="img">
                                 </div>
                                 <div class="team-info">
                                     <h4>Roboto Jaksen</h4>
@@ -143,7 +111,7 @@
                         <div class="col-lg-4 col-md-6">
                             <div class="single-team text-center mb-30 wow fadeInUp animated" data-animation="fadeInDown animated" data-delay=".2s">
                                 <div class="team-thumb">
-                                    <img src="img/team/team-img02.jpg" alt="img">
+                                    <img src="http://htmldemo.zcubethemes.com/relxtower/img/team/team-img02.jpg" alt="img">
                                 </div>
                                 <div class="team-info">
                                     <h4>Alina Roboto</h4>
@@ -160,7 +128,7 @@
                         <div class="col-lg-4 col-md-6">
                             <div class="single-team text-center mb-30 wow fadeInUp animated" data-animation="fadeInDown animated" data-delay=".2s">
                                 <div class="team-thumb">
-                                    <img src="img/team/team-img03.jpg" alt="img">
+                                    <img src="http://htmldemo.zcubethemes.com/relxtower/img/team/team-img03.jpg" alt="img">
                                 </div>
                                 <div class="team-info">
                                     <h4>Rock Alane</h4>
@@ -174,11 +142,10 @@
                                 </div>
                             </div>
                         </div>						
-                        
                         <div class="col-lg-4 col-md-6">
                             <div class="single-team text-center mb-30 wow fadeInUp animated" data-animation="fadeInDown animated" data-delay=".2s">
                                 <div class="team-thumb">
-                                    <img src="img/team/team-img03.jpg" alt="img">
+                                    <img src="http://htmldemo.zcubethemes.com/relxtower/img/team/team-img02.jpg" alt="img">
                                 </div>
                                 <div class="team-info">
                                     <h4>Rock Alane</h4>
@@ -195,7 +162,7 @@
 						<div class="col-lg-4 col-md-6">
                             <div class="single-team text-center mb-30 wow fadeInUp animated" data-animation="fadeInDown animated" data-delay=".2s">
                                 <div class="team-thumb">
-                                    <img src="img/team/team-img01.jpg" alt="img">
+                                    <img src="http://htmldemo.zcubethemes.com/relxtower/img/team/team-img03.jpg" alt="img">
                                 </div>
                                 <div class="team-info">
                                     <h4>Roboto Jaksen</h4>
@@ -212,7 +179,7 @@
 						<div class="col-lg-4 col-md-6">
                             <div class="single-team text-center mb-30 wow fadeInUp animated" data-animation="fadeInDown animated" data-delay=".2s">
                                 <div class="team-thumb">
-                                    <img src="img/team/team-img02.jpg" alt="img">
+                                    <img src="http://htmldemo.zcubethemes.com/relxtower/img/team/team-img01.jpg" alt="img">
                                 </div>
                                 <div class="team-info">
                                     <h4>Alina Roboto</h4>
@@ -230,19 +197,20 @@
                     </div>
                 </div>
             </section>
-            <!-- team-area-end -->       
+            <!-- team-area-end -->  
         </main>
         <!-- main-area-end -->
+
         <!-- footer -->
         <footer class="footer-bg footer-p pt-100 pb-80 ">
   
-            <div class="footer-top pb-30">
+            <div class="footer-top pb-30 text-right">
                 <div class="container">
                     <div class="row justify-content-between">
                         <div class="col-xl-6 col-lg-6 col-sm-6">
                             <div class="footer-widget mb-30">
                                 <div class="logo mb-35">
-                                    <a href="#"><img src="img/logo/logo.png" alt="logo"></a>
+                                    <a href="index.html"><img src="img/logo/logo.png" alt="logo"></a>
                                 </div>
                                 <div class="footer-text mb-20">
                                     <p>Pellentesque habitant morbi tristique senectus et netus et fames acturpis egestas. Vestibulum tortor quam, feugiat vitae, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. mivitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien.</p>
@@ -282,12 +250,12 @@
                                     <ul>
                                         <li><a href="index.html">Home</a></li>
                                         <li><a href="projects.html">Projects</a></li>
-                                        <li><a href="services.html">Executive Management</a></li>
+                                        <li><a href="executive-management.html">Executive Management</a></li>
                                         <li><a href="about.html">About Us</a></li>
                                         <li><a href="contact.html">Contact Us</a></li>
                                         <li><a href="policy.html">Privacy Policy</a></li>
                                         <li><a href="terms-and-conditions.html">Terms & Conditions</a></li>
-                                        <li><a href="common-questions.html">Common Questions</a></li>
+                                        <li><a href="frequently-asked-questions.html">FAQ</a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -331,5 +299,6 @@
         <script src="js/jquery.magnific-popup.min.js"></script>
         <script src="js/element-in-view.js"></script>
         <script src="js/main.js"></script>
+        <script src="js/localization.js"></script>
     </body>
 </html>

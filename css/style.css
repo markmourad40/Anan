@@ -27,9 +27,9 @@
 
 
 /* 1. Theme default css */
- @import url('https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700,700i,900,900i|Poppins:100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap');
- @import url('https://fonts.googleapis.com/css?family=Cairo:300,400,500,600,700');
- body {
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700,700i,900,900i|Poppins:100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Cairo:300,400,500,600,700');
+body {
 	font-family: 'cairo', 'Poppins', sans-serif;
 	font-size: 14px;
 	font-weight: normal;
@@ -869,8 +869,8 @@ label {
 	background: #A98236;
 	height: 30px;
 	display: inline-block;
-	width: 110px;
-	text-align: center;
+	/* width: 110px; */
+	/* text-align: center; */
 	line-height: 30px;
 	margin-bottom: 30px;
 }
@@ -1874,7 +1874,7 @@ margin-bottom: 0;
 	opacity: 1;
 }
 .bsingle__content {
-	padding: 50px;
+	padding: 30px;
 	border: 2px solid #f5f8fa;
 }
 .bsingle__content .meta-info ul {
@@ -1883,20 +1883,25 @@ margin-bottom: 0;
 .bsingle__content .meta-info ul li {
 	display: inline-block;
 	font-size: 14px;
+}
+[dir=rtl] .bsingle__content .meta-info ul li {
+	margin-left: 30px;
+}
+[dir=ltr] .bsingle__content .meta-info ul li {
 	margin-right: 30px;
 }
 .bsingle__content .meta-info ul li a {
-	color: #5f708f;
+	color: #1C3769;
 	text-transform: capitalize;
 }
 .bsingle__content .meta-info ul li a i {
-	margin-right: 5px;
+	margin: 0px 5px;
 }
 .bsingle__content .meta-info ul li a:hover {
 	color: #A98236;
 }
 .bsingle__content .meta-info ul li i {
-	margin-right: 5px;
+	margin: 0px 5px;
 }
 .bsingle__content h2 {
 	font-size: 32px;
@@ -1904,25 +1909,30 @@ margin-bottom: 0;
 	margin-bottom: 20px;
 	font-weight: 500;
 }
+.bsingle__content h2 a {
+	color: #1C3769;
+}
 .bsingle__content h2:hover a {
 	color: #A98236;
 }
 .bsingle__content p {
-	padding-right: 35px;
-	margin-bottom: 25px;
+	/* padding-right: 35px; */
+	font-size: 17px;
+	margin-bottom: 20px;
 }
 .bsingle__content .blog__btn .btn {
-  background: transparent;
-	border: 2px solid #A98236;
+  	background: transparent;
+	border: 1px solid #1C3769;
 	font-size: 16px;
+	padding: 15px 30px;
 	text-transform: uppercase;
-	color: #252525;
+	color: #1C3769;
 }
 .bsingle__content .blog__btn .btn::before {
   content: none;
 }
 .bsingle__content .blog__btn .btn:hover {
-	background: #A98236;
+	background: #1C3769;
 	color: #fff;
 }
 .quote-post {
@@ -2548,7 +2558,7 @@ margin-bottom: 0;
 }
 .contact-info {
     padding: 30px 20px;
-    background: #3c3935;
+    background: #1C3769;
 }
 .contact-info p{
 	color:#fff;
@@ -2568,7 +2578,7 @@ div.single-cta:last-child {
 }
 .single-cta p{margin-bottom: 0;}
 .single-cta p a{color: #A98236;}
-.s-cta-btn .btn{background:#383838;color:#fff;margin-top: 10px;}
+.s-cta-btn .btn{background:#1C3769;color:#fff;margin-top: 10px;}
 .s-cta-btn .btn::before{content: none;}
 /* 18. pricing */
 .pricing-box {
@@ -2726,9 +2736,14 @@ margin-bottom: 30px;
 	display: inline-block;
 	font-size: 14px;
 	text-align: center;
-	right: 25px;
 	color: #A98236;
 	bottom: 22px;
+}
+[dir=ltr] .contact-field::after {
+	right: 25px;
+}
+[dir=rtl] .contact-field::after {
+	left: 25px;
 }
 .contact-field.c-email::after{content: "\f0e0";}
 .contact-field.c-subject::after{content: "\f249";}
@@ -2761,7 +2776,7 @@ margin-bottom: 30px;
 }
 /* 20. footer */
 .footer-bg {
-	background: #182323;
+	background: #001735;
 }
 .f-cta-area.gray-bg {
 	background: #f4f4fe;
@@ -2796,7 +2811,7 @@ margin-bottom: 30px;
 .f-widget-title h5::before {
 	content: "";
 	position: absolute;
-	left: 0;
+	/* left: 0; */
 	bottom: 0;
 	height: 2px;
 	width: 40px;
@@ -2845,7 +2860,7 @@ margin-bottom: 30px;
 .f-insta ul li:hover a::before{top: 50%;opacity: 1;}
 .f-insta ul li:hover a::after{opacity: .6;}
 .copyright-text {
-	border-top: 1px solid #313131;
+	border-top: 1px solid #A98236;
 	padding: 20px 0;
 }
 .copyright-text p {
