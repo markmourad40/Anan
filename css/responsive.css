@@ -357,9 +357,9 @@
 .contact-bg.pb-80 {
 	padding-bottom: 120px;
 }
-.single-post {
+/* .single-post {
 	box-shadow: 0px 10px 80px 0px rgba(193, 193, 193, 0.41);
-}
+} */
 .breadcrumb-area {
 	min-height: 500px;
 }
@@ -397,20 +397,17 @@
 
 /* small mobile :320px. */
 @media (max-width: 767px) {
-	.top-btn {
+.top-btn {
     padding-left: 15px !important;
 	padding-right: 15px !important;
 }
-	.table td, .table th {
+.table td, .table th {
     display: block;
 }
-.apartments nav > div a.nav-item.nav-link, .apartments nav > div a.nav-item.nav-link.active {
-    margin-bottom: 30px;
-}
-	.slider-price {
+.slider-price {
     display: none;
 }
-	.slider-bg2 .slider-content > span {
+.slider-bg2 .slider-content > span {
     font-size: 18px;
 }
 .slider-bg2 .video-i{
@@ -813,9 +810,9 @@ border-bottom: none;
 .contact-bg.pb-80 {
 	padding-bottom: 120px;
 }
-.single-post {
+/* .single-post {
 	box-shadow: 0px 10px 80px 0px rgba(193, 193, 193, 0.41);
-}
+} */
 .slider-shape {
 	display: none !important;
 }

@@ -311,9 +311,9 @@ function parallaxMouse() {
 parallaxMouse();
 
 // service active
-$('.s-single-services').on('mouseenter', function () {
-	$(this).addClass('active').parent().siblings().find('.s-single-services').removeClass('active');
-})
+// $('.s-single-services').on('mouseenter', function () {
+// 	$(this).addClass('active').parent().siblings().find('.s-single-services').removeClass('active');
+// })
 
 // scrollToTop
 $.scrollUp({
