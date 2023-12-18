@@ -122,8 +122,11 @@
     padding-left: 50px;
 	padding-right: 50px;
 }
-.footer-social span {
+[dir=ltr] .footer-social span {
 	margin-right: 12px;
+}
+[dir=rtl] .footer-social span {
+	margin-left: 12px;
 }
 .f-insta ul li {
 	width: 28%;

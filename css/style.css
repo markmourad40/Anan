@@ -2800,13 +2800,23 @@ margin-bottom: 30px;
 	font-weight: 500;
 	font-family: 'Playfair Display', serif;
 	display: inline-block;
+}
+[dir=ltr] .footer-social span {
 	margin-right: 20px;
+}
+[dir=rtl] .footer-social span {
+	margin-left: 20px;
 }
 .footer-social a {
 	font-size: 16px;
 	color: #ddd;
-	margin-right: 15px;
 	display: inline-block;
+}
+[dir=ltr] .footer-social a {
+	margin-right: 15px;
+}
+[dir=rtl] .footer-social a {
+	margin-left: 15px;
 }
 .footer-social a:hover{color: #A98236;}
 .f-widget-title h5 {
@@ -4303,6 +4313,16 @@ table, th, td {
 }
 .project-card:hover .services-content span {
 	background: #A98236;
+}
+.store-images {
+	width: 100%;
+	display: flex;
+	column-gap: 12px;
+	row-gap: 8px;
+	margin-top: 20px;
+}
+.store-images img {
+	cursor: pointer;
 }
 /* .project-card:hover::before{
 	opacity: 1;
