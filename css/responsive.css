@@ -834,7 +834,7 @@ border-bottom: none;
 .choose-content p {
 	padding-right: 0;
 }
-.choose-list ul li i {
+/* .choose-list ul li i {
 	display: block;
 	margin-right: 15px;
 	float: left;
@@ -843,7 +843,7 @@ border-bottom: none;
 .choose-list ul li span {
 	overflow: hidden;
 	display: block;
-}
+} */
 .inner-wp-icon {
 	display: none;
 }
