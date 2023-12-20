@@ -1647,6 +1647,7 @@ margin-bottom: 0;
 }
 .testi-author img {
 	display:inline-block;
+	border-radius: 50%;
 	margin-bottom: 20px;
 }
 .ta-info {
